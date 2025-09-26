@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="b4e29cdc-ebae-4e6d-8510-5eb19fb3af2d" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/FRONTEND/FRONTEND/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/FRONTEND/FRONTEND/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/FRONTEND/FRONTEND/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/FRONTEND/FRONTEND/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/FRONTEND/FRONTEND/src/App.css" beforeDir="false" afterPath="$PROJECT_DIR$/FRONTEND/FRONTEND/src/App.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/FRONTEND/FRONTEND/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/FRONTEND/FRONTEND/src/App.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/FRONTEND/FRONTEND/src/App.test.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/FRONTEND/FRONTEND/src/index.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/FRONTEND/FRONTEND/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/FRONTEND/FRONTEND/src/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/FRONTEND/FRONTEND/src/logo.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/FRONTEND/FRONTEND/src/reportWebVitals.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/FRONTEND/FRONTEND/src/setupTests.js" beforeDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/FRONTEND/FRONTEND" />
+  </component>
+  <component name="ProjectColorInfo"><![CDATA[{
+  "associatedIndex": 4
+}]]></component>
+  <component name="ProjectId" id="32VkwqCBinB244Fqphpq00SXYw9" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ModuleVcsDetector.initialDetectionPerformed": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "git-widget-placeholder": "main",
+    "last_opened_file_path": "D:/3rd  Year/APC_FINAL_PROJECT"
+  }
+}]]></component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="b4e29cdc-ebae-4e6d-8510-5eb19fb3af2d" name="Changes" comment="" />
+      <created>1757513368923</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1757513368923</updated>
+    </task>
+    <servers />
+  </component>
+</project>
