@@ -5,16 +5,50 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b4e29cdc-ebae-4e6d-8510-5eb19fb3af2d" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/FRONTEND/FRONTEND/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/FRONTEND/FRONTEND/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FRONTEND/FRONTEND/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/FRONTEND/FRONTEND/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FRONTEND/FRONTEND/src/App.css" beforeDir="false" afterPath="$PROJECT_DIR$/FRONTEND/FRONTEND/src/App.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FRONTEND/FRONTEND/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/FRONTEND/FRONTEND/src/App.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FRONTEND/FRONTEND/src/App.test.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/FRONTEND/FRONTEND/src/index.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/FRONTEND/FRONTEND/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/FRONTEND/FRONTEND/src/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FRONTEND/FRONTEND/src/logo.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/FRONTEND/FRONTEND/src/reportWebVitals.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/FRONTEND/FRONTEND/src/setupTests.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/course-service/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/course-service/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/course-service/course-service/.gitattributes" beforeDir="false" afterPath="$PROJECT_DIR$/course-service/course-service/.gitattributes" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/course-service/course-service/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/course-service/course-service/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/course-service/course-service/.mvn/wrapper/maven-wrapper.properties" beforeDir="false" afterPath="$PROJECT_DIR$/course-service/course-service/.mvn/wrapper/maven-wrapper.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/course-service/course-service/mvnw.cmd" beforeDir="false" afterPath="$PROJECT_DIR$/course-service/course-service/mvnw.cmd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/course-service/course-service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/course-service/course-service/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/course-service/course-service/src/main/java/com/college/project/course_service/CourseServiceApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/course-service/course-service/src/main/java/com/college/project/course_service/CourseServiceApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/course-service/course-service/src/main/java/com/college/project/course_service/controller/CourseController.java" beforeDir="false" afterPath="$PROJECT_DIR$/course-service/course-service/src/main/java/com/college/project/course_service/controller/CourseController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/course-service/course-service/src/main/java/com/college/project/course_service/entity/Course.java" beforeDir="false" afterPath="$PROJECT_DIR$/course-service/course-service/src/main/java/com/college/project/course_service/entity/Course.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/course-service/course-service/src/main/java/com/college/project/course_service/repository/CourseRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/course-service/course-service/src/main/java/com/college/project/course_service/repository/CourseRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/course-service/course-service/src/main/java/com/college/project/course_service/service/CourseService.java" beforeDir="false" afterPath="$PROJECT_DIR$/course-service/course-service/src/main/java/com/college/project/course_service/service/CourseService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/course-service/course-service/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/course-service/course-service/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/course-service/course-service/src/test/java/com/college/project/course_service/CourseServiceApplicationTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/course-service/course-service/src/test/java/com/college/project/course_service/CourseServiceApplicationTests.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/student-service/.gitattributes" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/student-service/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/student-service/.mvn/wrapper/maven-wrapper.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/student-service/mvnw" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/student-service/mvnw.cmd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/student-service/pom.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/student-service/src/main/java/com/college/project/student_service/DataInitializer.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/student-service/src/main/java/com/college/project/student_service/StudentServiceApplication.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/student-service/src/main/java/com/college/project/student_service/controller/AdminController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/student-service/src/main/java/com/college/project/student_service/controller/AuthController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/student-service/src/main/java/com/college/project/student_service/controller/StudentController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/student-service/src/main/java/com/college/project/student_service/entity/ERole.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/student-service/src/main/java/com/college/project/student_service/entity/Role.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/student-service/src/main/java/com/college/project/student_service/entity/Student.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/student-service/src/main/java/com/college/project/student_service/payload/JwtResponse.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/student-service/src/main/java/com/college/project/student_service/payload/LoginRequest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/student-service/src/main/java/com/college/project/student_service/payload/MessageResponse.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/student-service/src/main/java/com/college/project/student_service/payload/SignupRequest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/student-service/src/main/java/com/college/project/student_service/repository/RoleRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/student-service/src/main/java/com/college/project/student_service/repository/StudentRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/student-service/src/main/java/com/college/project/student_service/security/WebSecurityConfig.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/student-service/src/main/java/com/college/project/student_service/security/jwt/AuthTokenFilter.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/student-service/src/main/java/com/college/project/student_service/security/jwt/JwtUtils.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/student-service/src/main/java/com/college/project/student_service/security/services/UserDetailsImpl.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/student-service/src/main/java/com/college/project/student_service/security/services/UserDetailsServiceImpl.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/student-service/src/main/java/com/college/project/student_service/service/StudentService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/student-service/src/main/resources/application.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/student-service/src/test/java/com/college/project/student_service/StudentServiceApplicationTests.java" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -22,24 +56,33 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="Git.Settings">
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/FRONTEND/FRONTEND" />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "associatedIndex": 4
-}]]></component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 4
+}</component>
   <component name="ProjectId" id="32VkwqCBinB244Fqphpq00SXYw9" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "ModuleVcsDetector.initialDetectionPerformed": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "main",
-    "last_opened_file_path": "D:/3rd  Year/APC_FINAL_PROJECT"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Application.CourseServiceApplication.executor&quot;: &quot;Run&quot;,
+    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;D:/3rd  Year/APC_FINAL_PROJECT&quot;
   }
-}]]></component>
+}</component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-jdk-9823dce3aa75-bf35d07a577b-intellij.indexing.shared.core-IU-252.25557.131" />
+      </set>
+    </attachedChunks>
+  </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
       <changelist id="b4e29cdc-ebae-4e6d-8510-5eb19fb3af2d" name="Changes" comment="" />

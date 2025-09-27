@@ -1,7 +1,7 @@
 package com.college.project.course_service.service;
 
-import java.util.List;
-
+import com.college.project.course_service.entity.Course;
+import com.college.project.course_service.repository.CourseRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpEntity;
 import org.springframework.http.HttpHeaders;
@@ -9,8 +9,7 @@ import org.springframework.http.HttpMethod;
 import org.springframework.stereotype.Service;
 import org.springframework.web.client.RestTemplate;
 
-import com.college.project.course_service.entity.Course;
-import com.college.project.course_service.repository.CourseRepository;
+import java.util.List;
 
 @Service
 public class CourseService {
