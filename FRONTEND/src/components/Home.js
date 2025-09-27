@@ -27,7 +27,9 @@ const CourseCard = ({ title, desc, color }) => (
       <div className="card-body">
         <h5 className="fw-bold">{title}</h5>
         <p className="text-muted">{desc}</p>
-        <button className="btn btn-sm btn-primary">View Course</button>
+        <Link to="/login" className="btn btn-sm btn-primary">
+  View Course
+</Link>
       </div>
     </div>
   </div>
@@ -148,8 +150,7 @@ const Home = () => {
                 <span className="typewriter">{typed}</span>
               </p>
               <div className="mt-4 d-flex flex-wrap gap-2 align-items-center">
-                <Link to="/login" className="btn btn-primary btn-lg ripple">🔑 Login</Link>
-                <Link to="/register" className="btn btn-outline-primary btn-lg ripple">📝 Register</Link>
+                
                 <Link to="/register" className="btn btn-info btn-lg text-white ripple">🔍 Explore Courses</Link>
                 {/* Dark mode toggle alongside Explore Courses */}
                 <button className="btn btn-dark btn-lg" onClick={toggleTheme}>

@@ -19,7 +19,7 @@ const Login = () => {
     AuthService.login(username, password).then(
       (data) => {
         if (data.roles.includes("ROLE_ADMIN")) {
-          navigate("/admin");
+          navigate("/home");
         } else {
           navigate("/profile");
         }
