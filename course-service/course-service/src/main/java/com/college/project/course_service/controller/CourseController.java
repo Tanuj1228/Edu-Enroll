@@ -33,13 +33,25 @@ public class CourseController {
         return courseRepository.findAll();
     }
 
-    // Endpoint to ADD a new course (Admin only)
+    // Endpoint to ADD a new course (Admin only) with validations
     @PostMapping
-    public Course addCourse(@RequestBody Course course) {
-        return courseRepository.save(course);
+    public ResponseEntity<?> addCourse(@RequestBody Course course) {
+        // ✅ Check if course name already exists
+        if (courseRepository.findByCourseNameIgnoreCase(course.getCourseName()).isPresent()) {
+            return ResponseEntity.badRequest().body("Course with name '" + course.getCourseName() + "' already exists.");
+        }
+
+        // ✅ Check if professor is already assigned to 3 courses
+        int professorCourseCount = courseRepository.countByInstructorIgnoreCase(course.getInstructor());
+        if (professorCourseCount >= 3) {
+            return ResponseEntity.badRequest().body("Professor '" + course.getInstructor() + "' is already assigned to 3 courses.");
+        }
+
+        Course savedCourse = courseRepository.save(course);
+        return ResponseEntity.ok(savedCourse);
     }
 
-    // ✅ UPDATE endpoint (edit course details)
+    // ✅ UPDATE endpoint (edit course details) with validations
     @PutMapping("/{id}")
     public ResponseEntity<?> updateCourse(@PathVariable Long id, @RequestBody Course updatedCourse) {
         Optional<Course> existingCourseOpt = courseRepository.findById(id);
@@ -48,7 +60,20 @@ public class CourseController {
             return ResponseEntity.notFound().build();
         }
 
+        // ✅ Check if new course name already exists (other than this course)
+        courseRepository.findByCourseNameIgnoreCase(updatedCourse.getCourseName())
+                .filter(existing -> !existing.getId().equals(id))
+                .ifPresent(existing -> {
+                    throw new RuntimeException("Course with name '" + updatedCourse.getCourseName() + "' already exists.");
+                });
+
+        // ✅ Check professor course limit (ignore current course if same instructor)
+        int professorCourseCount = courseRepository.countByInstructorIgnoreCase(updatedCourse.getInstructor());
         Course existingCourse = existingCourseOpt.get();
+        if (!existingCourse.getInstructor().equalsIgnoreCase(updatedCourse.getInstructor()) && professorCourseCount >= 3) {
+            return ResponseEntity.badRequest().body("Professor '" + updatedCourse.getInstructor() + "' is already assigned to 3 courses.");
+        }
+
         existingCourse.setCourseName(updatedCourse.getCourseName());
         existingCourse.setDescription(updatedCourse.getDescription());
         existingCourse.setInstructor(updatedCourse.getInstructor());
