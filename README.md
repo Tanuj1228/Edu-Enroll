@@ -1,71 +1,163 @@
-<!-- 🎨 Redesigned GitHub Project README for Edu-Enroll -->
+<!-- 🌟 Edu-Enroll GitHub README -->
 
 <h1 align="center">
-  <span style="font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; font-size: 30px; color: #4CAF50;">🚀 Welcome to <strong>Edu-Enroll</strong> 👋</span>
+  🎓 Edu-Enroll
 </h1>
 
 <p align="center">
-  <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=600&size=24&duration=2500&pause=800&color=36BCF7&center=true&vCenter=true&width=800&lines=Modern+Course+Enrollment+Platform;Full+Stack+with+React+%26+Spring+Boot;Real-time+Stats+%26+Dark+Mode;Beautiful+Animations+%26+UI" alt="Typing Animation"/>
+  <strong>Next-gen Course Enrollment System</strong><br>
+  <em>Dynamic, Interactive, and Secure Learning Platform</em>
 </p>
 
 <p align="center">
-  <img src="https://media.giphy.com/media/xT9IgG50Fb7Mi0prBC/giphy.gif" width="500" alt="Edu-Enroll Demo"/>
+  <img src="https://img.shields.io/badge/React-18.2.0-blue?logo=react&logoColor=white" alt="React"/>
+  <img src="https://img.shields.io/badge/Spring%20Boot-3.2.0-green?logo=spring&logoColor=white" alt="Spring Boot"/>
+  <img src="https://img.shields.io/badge/MySQL-8.0-blue?logo=mysql&logoColor=white" alt="MySQL"/>
+  <img src="https://img.shields.io/badge/JWT-Secure-red" alt="JWT"/>
+  <img src="https://img.shields.io/badge/TailwindCSS-3.5.0-purple?logo=tailwindcss&logoColor=white" alt="Tailwind CSS"/>
 </p>
 
 ---
 
-## 💡 About Edu-Enroll
+## ✨ Project Highlights
 
-✨ Edu-Enroll is a **modern course enrollment platform** with real-time stats, dark/light theme support, and smooth animations.  
-🚀 Built with **React, Spring Boot, MySQL, and JWT Authentication**  
-🧠 Features include **dynamic popular courses, admin/user roles, course management, and typewriter animations**  
-💬 Open for **collaborations, contributions, and learning experiments**  
-
----
-
-## 🧰 Tech Stack
-
-| 💻 Languages | 🎨 Frontend | 🔧 Backend | 🗄️ Database | 🛠️ Tools |
-|--------------|------------|------------|------------|-----------|
-| ![Java](https://img.shields.io/badge/Java-orange?style=flat-square&logo=java) ![JavaScript](https://img.shields.io/badge/JavaScript-yellow?style=flat-square&logo=javascript) | ![React](https://img.shields.io/badge/React-20232A?style=flat-square&logo=react) ![Tailwind](https://img.shields.io/badge/Tailwind_CSS-06B6D4?style=flat-square&logo=tailwind-css) | ![Spring Boot](https://img.shields.io/badge/Spring_Boot-6DB33F?style=flat-square&logo=springboot) ![Node.js](https://img.shields.io/badge/Node.js-339933?style=flat-square&logo=node.js) | ![MySQL](https://img.shields.io/badge/MySQL-00758F?style=flat-square&logo=mysql) | ![GitHub](https://img.shields.io/badge/GitHub-black?style=flat-square&logo=github) ![Postman](https://img.shields.io/badge/Postman-orange?style=flat-square&logo=postman) ![Figma](https://img.shields.io/badge/Figma-F24E1E?style=flat-square&logo=figma) |
+- Fully **responsive** design for mobile, tablet, and desktop  
+- **Dark & Light mode** with smooth theme transition  
+- **Animated UI**: typewriter text, scroll reveals, hover effects  
+- **Real-time stats** updated every 15 seconds  
+- **Role-based access**: Users vs Admins  
+- **Secure JWT authentication** and **BCrypt password hashing**  
 
 ---
 
-## 🚀 Features
+## 🎯 Core Features
 
-### ✨ Explore & Enroll
-Browse courses and enroll with a single click.  
-<img src="https://media.giphy.com/media/3oEjI6SIIHBdRxXI40/giphy.gif" width="400" alt="Enroll Animation"/>
+### 🔐 User Authentication & Authorization
+- Secure **login & registration** using JWT  
+- Role-based access: **USER** vs **ADMIN**  
+- Passwords hashed with **BCrypt**  
 
-### 🌙 Dark & Light Mode
-Theme toggle with smooth transition.  
-<img src="https://media.giphy.com/media/3o6Zt481isNVuQI1l6/giphy.gif" width="400" alt="Dark Mode Animation"/>
+### 📚 Course Management
+- View **all courses** on interactive cards  
+- Course details with description and enrolled students  
+- **Top 3 popular courses** dynamically fetched  
+- **Colored borders** for courses for easy visual distinction  
+- **Admin** can manage courses via API  
+
+### 📝 Enrollment
+- One-click course enrollment  
+- Prevents duplicate enrollments  
+- Enrollment updates **real-time student count** and popularity stats  
+
+### 👨‍🎓 Student Management
+- Admin can view all registered students  
+- Remove a course from all students when deleted  
+- Users can view their profile and enrolled courses  
 
 ### 📊 Real-Time Stats
-See total students, courses, and popular courses dynamically.  
-<img src="https://media.giphy.com/media/xT9KVH8I1e3fXGdZtG/giphy.gif" width="400" alt="Stats Animation"/>
-
-### 🧑‍🏫 Admin & User Roles
-- Admin: manage courses and students  
-- User: enroll and view profile  
-
-### 💬 Testimonials
-Animated testimonial cards with smooth reveal on scroll.  
-<img src="https://media.giphy.com/media/l0HlA6vTSa8ozRbY4/giphy.gif" width="400" alt="Testimonials Animation"/>
+- Total courses & students displayed on homepage  
+- Animated counters for better UX  
+- Stats auto-update every **15 seconds**  
+- Course popularity ranking for backend analytics  
 
 ---
 
-## 🔧 Installation
+## 🌐 Frontend / UI Features
+
+### 🎨 Dark & Light Theme
+- Toggle between **dark & light modes**  
+- Smooth transitions & dynamic color adjustments  
+
+### 📱 Responsive Design
+- Works perfectly on **mobile, tablet, desktop**  
+- Adaptive cards & sections  
+
+### ✨ Interactive Cards
+- Hover effects & subtle scaling  
+- Colored borders and shadow effects  
+
+### 📈 Scroll & Reveal Animations
+- Cards animate as they come into view  
+- Delayed animations for polished look  
+
+### ⌨️ Typewriter Effect
+- Hero section with **dynamic typewriter text**  
+
+### 🔝 Scroll-To-Top Button
+- Appears after scrolling 320px  
+- Smooth scroll back to top  
+
+### 🌌 Background Animation
+- Subtle **radial & linear gradients**  
+- Smooth motion for visual liveliness  
+
+---
+
+## 📈 Analytics / Backend Features
+
+### 🛠️ Admin APIs
+- List all students  
+- Remove courses from students  
+- Protected via **ROLE_ADMIN**  
+
+### 👤 User APIs
+- Enroll in a course  
+- Get own profile  
+- Secure access with JWT  
+
+### 📊 Stats APIs
+- Returns total courses & students  
+- Used for animated frontend counters  
+
+### 🗄️ Database Integration
+- **Spring Boot JPA** for ORM  
+- MySQL storage  
+- Maintains student-course relationships  
+
+---
+
+## 🛠️ Developer / Misc Features
+
+- **JWT authentication** and role-based authorization  
+- **Password encryption** using BCrypt  
+- Axios API calls with **live updating data**  
+- IntersectionObserver for **lazy animations**  
+- Smooth hover transitions, shadows & consistent font/color scheme  
+
+---
+
+## 🔗 Tech Stack
+
+| Frontend | Backend | Database | DevOps |
+|----------|---------|----------|--------|
+| React + Hooks | Spring Boot | MySQL | GitHub |
+| Tailwind CSS & Bootstrap | JWT Auth | JPA / Hibernate | VS Code |
+| Axios for API calls | REST APIs | Student-Course Relationships | Postman |
+
+---
+
+## 🚀 Demo Screenshots
+
+<p align="center">
+  <img src="https://i.ibb.co/XYZ/hero-section.png" alt="Hero Section" width="600"/>
+  <img src="https://i.ibb.co/XYZ/course-cards.png" alt="Course Cards" width="600"/>
+  <img src="https://i.ibb.co/XYZ/admin-dashboard.png" alt="Admin Dashboard" width="600"/>
+</p>
+
+---
+
+## 🎯 How to Run Locally
 
 ```bash
-# Clone repository
+# Clone the repo
 git clone https://github.com/yourusername/edu-enroll.git
+cd edu-enroll
 
 # Backend
-cd student_service
+cd backend
 ./mvnw spring-boot:run
 
 # Frontend
-cd ../frontend
+cd frontend
 npm install
 npm start
