@@ -5,11 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b4e29cdc-ebae-4e6d-8510-5eb19fb3af2d" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Frontend/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/src/App.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Frontend/src/components/Home.js" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/src/components/Home.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/course-service/course-service/src/main/java/com/college/project/course_service/controller/CourseController.java" beforeDir="false" afterPath="$PROJECT_DIR$/course-service/course-service/src/main/java/com/college/project/course_service/controller/CourseController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/student-service/student-service/src/main/java/com/college/project/student_service/controller/StudentController.java" beforeDir="false" afterPath="$PROJECT_DIR$/student-service/student-service/src/main/java/com/college/project/student_service/controller/StudentController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/student-service/student-service/src/main/java/com/college/project/student_service/security/WebSecurityConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/student-service/student-service/src/main/java/com/college/project/student_service/security/WebSecurityConfig.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

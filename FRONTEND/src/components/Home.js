@@ -227,7 +227,7 @@ const Home = () => {
           <div className="row g-4 text-center">
             <div className="col-md-6">
               <div className="card rounded-3 shadow-sm p-4">
-                <h4 className="display-6 fw-bold">{coursesCount}+</h4>
+                <h4 className="display-6 fw-bold">{coursesCount}</h4>
                 <div className="text-muted">Courses</div>
               </div>
             </div>
