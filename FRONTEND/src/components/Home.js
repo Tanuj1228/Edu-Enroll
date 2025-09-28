@@ -1,6 +1,7 @@
 // src/components/Home.js
 import React, { useEffect, useRef, useState } from "react";
 import { Link } from "react-router-dom";
+import axios from "axios"; // ✅ added axios
 
 const Feature = ({ title, text, index, observeRef }) => (
   <div
@@ -18,7 +19,7 @@ const Feature = ({ title, text, index, observeRef }) => (
   </div>
 );
 
-const CourseCard = ({ title, desc, color }) => (
+const CourseCard = ({ title, desc, color, students }) => (
   <div className="col-md-4 mb-4">
     <div
       className="card border-0 shadow-lg h-100 course-card"
@@ -27,9 +28,10 @@ const CourseCard = ({ title, desc, color }) => (
       <div className="card-body">
         <h5 className="fw-bold">{title}</h5>
         <p className="text-muted">{desc}</p>
+        <p className="small text-muted">👨‍🎓 {students} students enrolled</p>
         <Link to="/login" className="btn btn-sm btn-primary">
-  View Course
-</Link>
+          View Course
+        </Link>
       </div>
     </div>
   </div>
@@ -42,6 +44,9 @@ const Home = () => {
   const [statsStarted, setStatsStarted] = useState(false);
   const [coursesCount, setCoursesCount] = useState(0);
   const [studentsCount, setStudentsCount] = useState(0);
+  const [popularCourses, setPopularCourses] = useState([]); // ✅ dynamic courses
+  const [error, setError] = useState(false); // ✅ track API error
+
   const revealRefs = useRef([]);
   revealRefs.current = [];
   const addRevealRef = (el) => {
@@ -52,6 +57,22 @@ const Home = () => {
   const [theme, setTheme] = useState(localStorage.getItem("site-theme") || "light");
 
   const toggleTheme = () => setTheme((t) => (t === "light" ? "dark" : "light"));
+
+  // ✅ Fetch top 3 popular courses from backend
+  useEffect(() => {
+    const fetchPopularCourses = async () => {
+      try {
+        const res = await axios.get("http://localhost:8081/api/courses/popular");
+        setPopularCourses(res.data.slice(0, 3)); // ✅ Only top 3 courses
+        setError(false);
+      } catch (err) {
+        console.error("Error fetching popular courses", err);
+        setError(true);
+      }
+    };
+
+    fetchPopularCourses();
+  }, []);
 
   // Typewriter effect
   useEffect(() => {
@@ -123,12 +144,6 @@ const Home = () => {
     { title: "👩‍🏫 Expert Instructors", text: "Learn from experienced professionals and subject matter experts." },
   ];
 
-  const popularCourses = [
-    { title: "React for Beginners", desc: "Build dynamic UIs using React.", color: "#3b82f6" },
-    { title: "Java Spring Boot", desc: "Master backend development with Spring.", color: "#16a34a" },
-    { title: "Python Data Science", desc: "Analyze data with Pandas & NumPy.", color: "#f59e0b" },
-  ];
-
   const testimonials = [
     { name: "Aarav", feedback: "This platform made learning so easy and fun!" },
     { name: "Meera", feedback: "The instructors are amazing and supportive." },
@@ -150,9 +165,7 @@ const Home = () => {
                 <span className="typewriter">{typed}</span>
               </p>
               <div className="mt-4 d-flex flex-wrap gap-2 align-items-center">
-                
                 <Link to="/register" className="btn btn-info btn-lg text-white ripple">🔍 Explore Courses</Link>
-                {/* Dark mode toggle alongside Explore Courses */}
                 <button className="btn btn-dark btn-lg" onClick={toggleTheme}>
                   {theme === "light" ? "🌙 Dark Mode" : "🌞 Light Mode"}
                 </button>
@@ -163,13 +176,29 @@ const Home = () => {
 
         {/* Features */}
         <div className="row mb-5">
-          {features.map((f, i) => <Feature key={i} title={f.title} text={f.text} index={i} observeRef={addRevealRef} />)}
+          {features.map((f, i) => (
+            <Feature key={i} title={f.title} text={f.text} index={i} observeRef={addRevealRef} />
+          ))}
         </div>
 
-        {/* Popular Courses */}
+        {/* ✅ Popular Courses (from backend) */}
         <h3 className="fw-bold mb-4">🔥 Popular Courses</h3>
         <div className="row mb-5">
-          {popularCourses.map((c, i) => <CourseCard key={i} {...c} />)}
+          {error ? (
+            <p className="text-danger">⚠️ Failed to load courses.</p>
+          ) : popularCourses.length === 0 ? (
+            <p className="text-muted">Loading courses...</p>
+          ) : (
+            popularCourses.map((c, i) => (
+              <CourseCard
+                key={i}
+                title={c.courseName}
+                desc={c.description}
+                students={c.enrolledCount}
+                color={["#3b82f6", "#16a34a", "#f59e0b", "#ef4444"][i % 4]}
+              />
+            ))
+          )}
         </div>
 
         {/* Testimonials */}
@@ -196,7 +225,9 @@ const Home = () => {
             </div>
             <div className="col-md-6">
               <div className="card rounded-3 shadow-sm p-4">
-                <h4 className="display-6 fw-bold">{studentsCount >= 1000 ? `${Math.floor(studentsCount/1000)}k+` : studentsCount}</h4>
+                <h4 className="display-6 fw-bold">
+                  {studentsCount >= 1000 ? `${Math.floor(studentsCount / 1000)}k+` : studentsCount}
+                </h4>
                 <div className="text-muted">Students</div>
               </div>
             </div>
@@ -204,11 +235,14 @@ const Home = () => {
         </section>
       </div>
 
-      {/* Scroll to top */}
       {showTop && (
-        <button className="scroll-top" onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}>↑</button>
+        <button
+          className="scroll-top"
+          onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
+        >
+          ↑
+        </button>
       )}
-
       {/* Styles */}
       <style>{`
         :root {

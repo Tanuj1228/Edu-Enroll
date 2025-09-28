@@ -10,8 +10,11 @@ import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.web.bind.annotation.*;
+import org.springframework.jdbc.core.JdbcTemplate;
 
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 @RestController
 @RequestMapping("/api/student")
@@ -22,6 +25,9 @@ public class StudentController {
 
     @Autowired
     private StudentRepository studentRepository;
+
+    @Autowired
+    private JdbcTemplate jdbcTemplate; // ✅ added JdbcTemplate for raw SQL queries
 
     @PostMapping("/enroll/{courseId}")
     @PreAuthorize("hasRole('USER')") // This annotation ensures only users with ROLE_USER can access it
@@ -60,5 +66,25 @@ public class StudentController {
                 .orElseThrow(() -> new RuntimeException("Error: Student not found."));
 
         return ResponseEntity.ok(student);
+    }
+
+    // 🔹 NEW endpoint: Get course popularity (for CourseService)
+    @GetMapping("/course-popularity")
+    public ResponseEntity<Map<Long, Long>> getCoursePopularity() {
+
+        String sql = "SELECT course_id, COUNT(student_id) AS enrolled_count " +
+                "FROM student_enrolled_courses " +
+                "GROUP BY course_id " +
+                "ORDER BY enrolled_count DESC";
+        List<Map<String, Object>> results = jdbcTemplate.queryForList(sql);
+
+        Map<Long, Long> popularityMap = new HashMap<>();
+        for (Map<String, Object> row : results) {
+            Long courseId = ((Number) row.get("course_id")).longValue();
+            Long count = ((Number) row.get("enrolled_count")).longValue();
+            popularityMap.put(courseId, count);
+        }
+
+        return ResponseEntity.ok(popularityMap);
     }
 }

@@ -3,16 +3,22 @@ package com.college.project.student_service.service;
 import com.college.project.student_service.entity.Student;
 import com.college.project.student_service.repository.StudentRepository;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 @Service
 public class StudentService {
 
     @Autowired
     private StudentRepository studentRepository;
+
+    @Autowired
+    private JdbcTemplate jdbcTemplate; // ✅ Added to query course popularity
 
     @Transactional
     public void enroll(String username, Long courseId) {
@@ -44,5 +50,18 @@ public class StudentService {
                 studentRepository.save(student);
             }
         }
+    }
+
+    // 🔹 Get course popularity for CourseService
+    public Map<Long, Long> getCoursePopularity() {
+        Map<Long, Long> popularityMap = new HashMap<>();
+        String sql = "SELECT course_id, COUNT(student_id) AS enrolled_count " +
+                "FROM student_enrolled_courses GROUP BY course_id";
+
+        jdbcTemplate.query(sql, rs -> {
+            popularityMap.put(rs.getLong("course_id"), rs.getLong("enrolled_count"));
+        });
+
+        return popularityMap;
     }
 }
