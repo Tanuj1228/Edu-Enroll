@@ -87,4 +87,11 @@ public class StudentController {
 
         return ResponseEntity.ok(popularityMap);
     }
+    // ✅ Get total number of students
+    @GetMapping("/count")
+    public ResponseEntity<Long> getTotalStudents() {
+        long totalStudents = studentRepository.count();
+        return ResponseEntity.ok(totalStudents);
+    }
+
 }

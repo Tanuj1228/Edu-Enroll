@@ -53,7 +53,8 @@ public class WebSecurityConfig {
                 .sessionManagement(session -> session.sessionCreationPolicy(SessionCreationPolicy.STATELESS))
                 .authorizeHttpRequests(auth ->
                         auth.requestMatchers("/api/auth/**").permitAll()
-                                .requestMatchers("/api/student/course-popularity").permitAll() // ✅ allow public access
+                                .requestMatchers("/api/student/course-popularity").permitAll() // ✅ already public
+                                .requestMatchers("/api/student/count").permitAll() // ✅ added: make count endpoint public
                                 .requestMatchers(HttpMethod.OPTIONS, "/**").permitAll()
                                 .anyRequest().authenticated()
                 );

@@ -74,6 +74,25 @@ const Home = () => {
     fetchPopularCourses();
   }, []);
 
+  // ✅ Fetch real-time stats from backend
+  useEffect(() => {
+    const fetchStats = async () => {
+      try {
+        const res = await axios.get("http://localhost:8081/api/courses/stats");
+        setCoursesCount(res.data.totalCourses);
+        setStudentsCount(res.data.totalStudents);
+      } catch (err) {
+        console.error("Error fetching stats", err);
+      }
+    };
+
+    fetchStats(); // initial fetch
+
+    // Optional: polling every 15 seconds for live stats
+    const interval = setInterval(fetchStats, 15000);
+    return () => clearInterval(interval);
+  }, []);
+
   // Typewriter effect
   useEffect(() => {
     let i = 0;
@@ -111,17 +130,6 @@ const Home = () => {
     return () => {
       revealRefs.current.forEach((r) => r && revealObserver.unobserve(r));
       if (statsRef.current) statsObserver.unobserve(statsRef.current);
-    };
-  }, [statsStarted]);
-
-  // Counters
-  useEffect(() => {
-    if (!statsStarted) return;
-    const t1 = setInterval(() => setCoursesCount((c) => Math.min(120, c + 2)), 30);
-    const t2 = setInterval(() => setStudentsCount((c) => Math.min(3000, c + 50)), 30);
-    return () => {
-      clearInterval(t1);
-      clearInterval(t2);
     };
   }, [statsStarted]);
 
@@ -260,6 +268,16 @@ const Home = () => {
           --card-bg: rgba(10,14,20,0.95);
         }
         body, .home-root { margin:0; padding:0; background:var(--bg); color:var(--text); min-height:100vh; transition: background 0.4s ease, color 0.4s ease; }
+        .feature-card, .course-card, .testimonial-card, .stats-section .card {
+  border-radius: 12px;
+  background: var(--card-bg);
+  color: var(--text);
+  transition: background 0.4s ease, color 0.4s ease;
+}
+
+.stats-section .text-muted {
+  color: var(--muted) !important;
+}
 
         /* Background animation - more visible */
         .bg-animate {
@@ -280,6 +298,7 @@ const Home = () => {
           50% { background-position: 100% 50%, 0% 50%, 80% 20%, 50% 50%; }
           100% { background-position: 50% 100%, 50% 0%, 20% 80%, 100% 100%; }
         }
+        
 
         /* Card, feature, testimonial styling */
         .feature-card, .course-card, .testimonial-card { border-radius: 12px; background: var(--card-bg); color: var(--text); }

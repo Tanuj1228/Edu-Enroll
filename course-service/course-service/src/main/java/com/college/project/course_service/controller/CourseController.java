@@ -161,4 +161,27 @@ public class CourseController {
 
         return ResponseEntity.ok(result);
     }
+    // ✅ Get real-time stats
+    @GetMapping("/stats")
+    public ResponseEntity<Map<String, Long>> getStats() {
+        Map<String, Long> stats = new HashMap<>();
+
+        // Total courses
+        long totalCourses = courseRepository.count();
+        stats.put("totalCourses", totalCourses);
+
+        // Total students - call student service
+        try {
+            ResponseEntity<Long> response = restTemplate.getForEntity(
+                    "http://localhost:8080/api/student/count", Long.class
+            );
+            stats.put("totalStudents", response.getBody());
+        } catch (Exception e) {
+            // Fallback to 0 if student service fails
+            stats.put("totalStudents", 0L);
+        }
+
+        return ResponseEntity.ok(stats);
+    }
+
 }
